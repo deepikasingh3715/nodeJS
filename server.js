@@ -182,8 +182,12 @@ app.use('/carts/:a/:b/:c/:d', async (req, res) => {
 })
 
 
+//const PORT=process.env.PORT || 4444
+
 
 db.sync()
   .then(() => {
-    app.listen(1234)
+    //app.listen(1234)
+    const port=process.env.PORT || 4444
+    app.listen(port)
   })
